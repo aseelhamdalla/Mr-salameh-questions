@@ -1,0 +1,36 @@
+سؤال اختيار اجابة وتلوينها
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>jQuery Example1</title>
+    
+</head>
+<body>
+    <h3>where is Orange ?! </h3>
+    <input class="rdSelect"type="radio"  name ="choice" value="Amman"><label id="correct" >Amman</label></br>
+    <input class="rdSelect"type="radio"  name ="choice" value="New York"><label class="wrong"> New York </label></br>
+    <input class="rdSelect"type="radio"  name ="choice" value="Irbid"><label class="wrong">Irbid</label></br>
+    <input class="rdSelect"type="radio"  name ="choice" value="Istanbul"><label class="wrong">Istanbul</label></br></br>
+    <input  id="show"type="button" value="Show Answer"> </br></br>
+    
+    
+    <script>
+       
+         $(' #show ').click(function (){
+           
+            var isChecked = $('.rdSelect:checked').val()?true:false;
+            if (isChecked == true){
+
+
+            $("#correct").css("color","green");
+            $(".wrong").css("color","red");}
+             
+      });
+
+      </script>
+    
+</body>
+</html>
